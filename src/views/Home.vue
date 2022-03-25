@@ -10,6 +10,7 @@
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 import Products from '../components/Products.vue'
+import { mapState } from "vuex";
 
 
 export default {
@@ -18,6 +19,9 @@ export default {
     // HelloWorld
     Products,
 
+  },
+    computed: {
+    ...mapState(["products"]),
   }
 }
 </script>

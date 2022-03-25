@@ -14,7 +14,7 @@
                     <br />
                     <div class="quantity-container">
                         <div class="input-symbol"
-                            v-on:click="product.quantity--">-</div>
+                            v-on:click="minusQuantity(product)">-</div>
                         <input v-model=product.quantity name="quantity-input" id="quantity-input-1" class="quantity" type="number"
                                 min="0"/>
                         <div class="input-symbol"
@@ -66,6 +66,11 @@ export default({
         },
         deleteLine: function (index) {
             this.products.splice(index, 1);
+        },
+        minusQuantity: function (product) {
+            if(product.quantity > 0) {
+                product.quantity--;
+            }
         }
     }
 

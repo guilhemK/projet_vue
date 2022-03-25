@@ -51,26 +51,30 @@
     </div> 
 </template>
 <script>
+import { mapState } from "vuex";
 export default({
     name:'OrderedProducts',
-    data: function() {
-        return {
-            champions: [],
-        }     
+    // data: function() {
+    //     return {
+    //         champions: [],
+    //     }     
+    // },
+    computed: {
+        ...mapState(["champions"])
     },
-    mounted: function() {
+    // mounted: function() {
         
-        fetch("../data/products.json")
-        .then(response => {
-            if(response.ok) {
-                response.json().then(json => {
-                    this.champions = json;
-                });
-            } else {
-            console.log('Erreur pour data_products.json ' + response.status + ': ' + response.statusText);
-            }
-        });
-    },
+    //     fetch("../data/products.json")
+    //     .then(response => {
+    //         if(response.ok) {
+    //             response.json().then(json => {
+    //                 this.champions = json;
+    //             });
+    //         } else {
+    //         console.log('Erreur pour data_products.json ' + response.status + ': ' + response.statusText);
+    //         }
+    //     });
+    // },
 })
 </script>
 <style>
