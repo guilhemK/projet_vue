@@ -25,7 +25,7 @@ import ProductList from "./ProductList.vue"
 import FormBasket from "./FormBasket.vue"
 
 export default({
-    name: 'Basket',
+    name: 'BasketContent',
     components: { ProductList, FormBasket },
     data() {
         return {
@@ -36,7 +36,6 @@ export default({
                     price: 20,
                     quantity: 1,
                     total: 0
-
                 },
                 {
                     id: 2,
@@ -44,7 +43,6 @@ export default({
                     price: 10,
                     quantity: 1,
                     total: 0
-
                 },
                 {
                     id: 3,
@@ -52,7 +50,6 @@ export default({
                     price: 5,
                     quantity: 1,
                     total: 0
-
                 }
             ],
             totalBasket: 0,  

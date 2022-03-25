@@ -1,22 +1,23 @@
 <template>
-  <div class="home">
+  <div>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Products />
+    <Basket-content />
   </div>
 </template>
 
 <script>
+import BasketContent from '../components/BasketContent.vue'
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-import Products from '../components/Products.vue'
+
 
 
 export default {
-  name: 'Home',
+  name: 'Basket',
   components: {
     // HelloWorld
-    Products,
+    BasketContent,
 
   }
 }

@@ -45,15 +45,16 @@ export default({
         quantity: function (val) {
             console.log(val);
         },
+        totalLines: function(totalBasket) {
+            this.$emit('totalLinesChanged', totalBasket);
+        }
     },
     computed: {
         totalLines: function() {
             let totalBasket = 0;
             this.products.forEach(product => {
                 totalBasket += product.total;
-            });
-
-            this.$emit('totalLinesChanged', totalBasket);
+            });            
 
             return totalBasket;
         }

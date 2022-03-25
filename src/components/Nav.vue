@@ -1,15 +1,15 @@
 <template>
     <header id="main-header">
         <div class="header-main-container">
-
+            
             <div class="header-logo-container">
-                <!--<a href="./main.php">
-                    <img src="../images/logo-or.png" alt="logo du site" class="header-logo"> !-->
-                <!-- </a> -->
+                <router-link :to="{ name: 'Home' }">
+                    <img src="../assets/logo-or.png" alt="logo du site" class="header-logo">
+                </router-link>
             </div>
 
             <div class="header-title-container">
-                <h1><a href="./main.php">LEAGUE OF SKINS</a></h1>
+                <h1><router-link :to="{ name: 'Home' }">LEAGUE OF SKINS</router-link></h1>
             </div>
 
             <div class="header-li-container">
@@ -18,10 +18,10 @@
                         <a href="../admin/admin-dashboard.php">Admin</a>
                     </li>
                     <li>
-                        <a href="./connection.php">Se connecter</a>
+                        <router-link :to="{ name:'Connection' }">Se connecter</router-link>
                     </li>
                     <li>
-                        <a href="./basket.php">Mon panier</a>
+                        <router-link :to="{ name:'Basket' }">Mon panier</router-link>
                     </li>
                 </ul>
             </div>
@@ -29,10 +29,10 @@
         <nav class="nav-header">
             <ul>
                 <li class="header-nav-li">
-                    <a href="./main.php">Skins</a>
+                    <router-link :to="{ name: 'Home' }">Skins</router-link>
                 </li>
                 <li class="header-nav-li">
-                    <a href="./orders.php">Mes skins</a>
+                    <router-link :to="{ name: 'Orders' }">Mes skins</router-link>
                 </li>
             </ul>
         </nav>
